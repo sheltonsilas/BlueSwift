@@ -3,7 +3,7 @@ import XCTest
 
 final class InterpreterTests: XCTestCase {
 
-    func testParsesSimpleClass() {
+    func testEvaluatesSimpleIncrementMethod() throws {
         let source = """
         class Counter {
             var count: Int = 0
@@ -15,12 +15,34 @@ final class InterpreterTests: XCTestCase {
         """
 
         let interpreter = Interpreter()
-        let tree = interpreter.parse(source)
+        _ = interpreter.parse(source)
+        let evaluation = try interpreter.evaluate(classNamed: "Counter", callingMethod: "increment")
 
-        XCTAssertFalse(tree.description.isEmpty)
-        // TODO(milestone 1): once evaluation exists, this test should
-        // instantiate Counter, call increment(), and assert count == 1.
-        // That's the real target for "interpreter core" — parsing alone
-        // is not the milestone, evaluation is.
+        XCTAssertEqual(evaluation.properties["count"], .int(1))
+        XCTAssertEqual(evaluation.value, .void)
+    }
+
+    func testEvaluatesMethodWithParameterAndReturnValue() throws {
+        let source = """
+        class Adder {
+            var count: Int = 10
+
+            func add(_ value: Int) -> Int {
+                count += value
+                return count
+            }
+        }
+        """
+
+        let interpreter = Interpreter()
+        _ = interpreter.parse(source)
+        let evaluation = try interpreter.evaluate(
+            classNamed: "Adder",
+            callingMethod: "add",
+            with: [.int(5)]
+        )
+
+        XCTAssertEqual(evaluation.value, .int(15))
+        XCTAssertEqual(evaluation.properties["count"], .int(15))
     }
 }
