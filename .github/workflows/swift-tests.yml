@@ -1,0 +1,22 @@
+name: Swift Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Print Swift version
+        run: swift --version
+
+      - name: Run tests with coverage
+        run: swift test --enable-code-coverage
