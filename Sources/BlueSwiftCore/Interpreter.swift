@@ -136,6 +136,16 @@ public struct Interpreter {
         return tree
     }
 
+    public func resolvedTypeDefinitions() throws -> [ClassDefinition] {
+        guard storage.sourceFile != nil else {
+            throw InterpreterError.noParsedSource
+        }
+
+        return try storage.typeDefinitions.keys.sorted().map { name in
+            try resolveClassDefinition(named: name)
+        }
+    }
+
     public func evaluate(
         classNamed className: String,
         callingMethod methodName: String,

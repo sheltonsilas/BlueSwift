@@ -8,7 +8,8 @@ let package = Package(
         .macOS(.v14) // macOS target kept only so `swift test` runs fast in CI/locally
     ],
     products: [
-        .library(name: "BlueSwiftCore", targets: ["BlueSwiftCore"])
+        .library(name: "BlueSwiftCore", targets: ["BlueSwiftCore"]),
+        .library(name: "BlueSwiftUI", targets: ["BlueSwiftUI"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "509.0.0")
@@ -21,9 +22,17 @@ let package = Package(
                 .product(name: "SwiftParser", package: "swift-syntax")
             ]
         ),
+        .target(
+            name: "BlueSwiftUI",
+            dependencies: ["BlueSwiftCore"]
+        ),
         .testTarget(
             name: "BlueSwiftCoreTests",
             dependencies: ["BlueSwiftCore"]
+        ),
+        .testTarget(
+            name: "BlueSwiftUITests",
+            dependencies: ["BlueSwiftUI", "BlueSwiftCore"]
         )
     ]
 )
