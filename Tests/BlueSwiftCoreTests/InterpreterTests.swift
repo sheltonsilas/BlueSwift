@@ -115,4 +115,73 @@ final class InterpreterTests: XCTestCase {
 
         XCTAssertEqual(evaluation.value, .int(15))
     }
+
+    func testSubclassMethodOverrideWinsOverSuperclassMethod() throws {
+        let source = """
+        class Animal {
+            func sound() -> String {
+                return "base"
+            }
+        }
+
+        class Dog: Animal {
+            func sound() -> String {
+                return "override"
+            }
+        }
+        """
+
+        let interpreter = Interpreter()
+        _ = interpreter.parse(source)
+        let evaluation = try interpreter.evaluate(classNamed: "Dog", callingMethod: "sound")
+
+        XCTAssertEqual(evaluation.value, .string("override"))
+    }
+
+    func testSubclassCanCallInheritedMethod() throws {
+        let source = """
+        class CounterBase {
+            var count: Int = 2
+
+            func read() -> Int {
+                return count
+            }
+        }
+
+        class ChildCounter: CounterBase {
+            func own() -> Int {
+                return 99
+            }
+        }
+        """
+
+        let interpreter = Interpreter()
+        _ = interpreter.parse(source)
+        let evaluation = try interpreter.evaluate(classNamed: "ChildCounter", callingMethod: "read")
+
+        XCTAssertEqual(evaluation.value, .int(2))
+    }
+
+    func testStructCopyDoesNotShareMutations() throws {
+        let source = """
+        struct CounterValue {
+            var count: Int = 0
+        }
+
+        class Copier {
+            func run() -> Int {
+                var original: CounterValue = CounterValue()
+                var copy: CounterValue = original
+                copy.count += 1
+                return original.count
+            }
+        }
+        """
+
+        let interpreter = Interpreter()
+        _ = interpreter.parse(source)
+        let evaluation = try interpreter.evaluate(classNamed: "Copier", callingMethod: "run")
+
+        XCTAssertEqual(evaluation.value, .int(0))
+    }
 }

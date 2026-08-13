@@ -6,7 +6,28 @@ public enum Value: Equatable {
     case string(String)
     case bool(Bool)
     case array([Value])
+    case classInstance(ClassInstance)
+    case structInstance(StructInstance)
     case void
+}
+
+public struct StructInstance: Equatable {
+    public let typeName: String
+    public var properties: [String: Value]
+}
+
+public final class ClassInstance: Equatable {
+    public let typeName: String
+    public var properties: [String: Value]
+
+    public init(typeName: String, properties: [String: Value]) {
+        self.typeName = typeName
+        self.properties = properties
+    }
+
+    public static func == (lhs: ClassInstance, rhs: ClassInstance) -> Bool {
+        lhs === rhs || (lhs.typeName == rhs.typeName && lhs.properties == rhs.properties)
+    }
 }
 
 public final class Environment {
@@ -43,6 +64,11 @@ public final class Environment {
 }
 
 public struct ClassDefinition {
+    public enum Kind {
+        case `class`
+        case `struct`
+    }
+
     public struct StoredProperty {
         public let name: String
         public let declaredType: String?
@@ -59,7 +85,9 @@ public struct ClassDefinition {
         public let body: [CodeBlockItemSyntax]
     }
 
+    public let kind: Kind
     public let name: String
+    public let supertypeName: String?
     public let properties: [StoredProperty]
     public let methods: [Method]
 }
@@ -82,8 +110,17 @@ public enum InterpreterError: Error, Equatable {
 }
 
 public struct Interpreter {
+    private struct UnresolvedClassDefinition {
+        let kind: ClassDefinition.Kind
+        let name: String
+        let supertypeName: String?
+        let properties: [ClassDefinition.StoredProperty]
+        let methods: [ClassDefinition.Method]
+    }
+
     private final class Storage {
         var sourceFile: SourceFileSyntax?
+        var typeDefinitions: [String: UnresolvedClassDefinition] = [:]
     }
 
     private let storage = Storage()
@@ -95,6 +132,7 @@ public struct Interpreter {
     public func parse(_ source: String) -> SourceFileSyntax {
         let tree = Parser.parse(source: source)
         storage.sourceFile = tree
+        storage.typeDefinitions = buildTypeDefinitions(from: tree)
         return tree
     }
 
@@ -103,31 +141,30 @@ public struct Interpreter {
         callingMethod methodName: String,
         with arguments: [Value] = []
     ) throws -> EvaluationResult {
-        guard let sourceFile = storage.sourceFile else {
+        guard storage.sourceFile != nil else {
             throw InterpreterError.noParsedSource
         }
 
-        let classDefinition = try buildClassDefinition(from: sourceFile, named: className)
-        var objectProperties: [String: Value] = [:]
-        let propertyEnvironment = Environment()
+        let classDefinition = try resolveClassDefinition(named: className)
+        var objectProperties = try instantiateProperties(for: classDefinition)
+        let propertyEnvironment = Environment(bindings: objectProperties)
 
-        for property in classDefinition.properties {
-            guard let defaultValue = property.defaultValue else {
-                throw InterpreterError.missingPropertyDefaultValue(property.name)
+        let methodsWithName = classDefinition.methods.filter { $0.name == methodName }
+        guard let method = methodsWithName.first(where: { $0.parameters.count == arguments.count }) else {
+            if let firstMethod = methodsWithName.first {
+                throw InterpreterError.argumentCountMismatch(expected: firstMethod.parameters.count, actual: arguments.count)
             }
-            let value = try evaluateExpression(defaultValue, environment: propertyEnvironment, objectProperties: &objectProperties)
-            objectProperties[property.name] = value
-            propertyEnvironment.define(property.name, value: value)
-        }
-
-        guard let method = classDefinition.methods.first(where: { $0.name == methodName }) else {
             throw InterpreterError.methodNotFound(methodName)
-        }
-        guard method.parameters.count == arguments.count else {
-            throw InterpreterError.argumentCountMismatch(expected: method.parameters.count, actual: arguments.count)
         }
 
         let methodEnvironment = Environment(parent: propertyEnvironment)
+        let selfValue: Value = switch classDefinition.kind {
+        case .class:
+            .classInstance(ClassInstance(typeName: classDefinition.name, properties: objectProperties))
+        case .struct:
+            .structInstance(StructInstance(typeName: classDefinition.name, properties: objectProperties))
+        }
+        methodEnvironment.define("self", value: selfValue)
         for (parameter, argument) in zip(method.parameters, arguments) {
             methodEnvironment.define(parameter.name, value: argument)
         }
@@ -136,17 +173,41 @@ public struct Interpreter {
         return EvaluationResult(value: returnValue, properties: objectProperties)
     }
 
-    private func buildClassDefinition(from sourceFile: SourceFileSyntax, named className: String) throws -> ClassDefinition {
-        guard let classDeclaration = sourceFile.statements
-            .compactMap({ $0.item.as(ClassDeclSyntax.self) })
-            .first(where: { $0.name.text == className }) else {
-            throw InterpreterError.classNotFound(className)
-        }
+    private func buildTypeDefinitions(from sourceFile: SourceFileSyntax) -> [String: UnresolvedClassDefinition] {
+        var definitions: [String: UnresolvedClassDefinition] = [:]
+        for statement in sourceFile.statements {
+            if let classDeclaration = statement.item.as(ClassDeclSyntax.self) {
+                definitions[classDeclaration.name.text] = buildUnresolvedDefinition(
+                    kind: .class,
+                    name: classDeclaration.name.text,
+                    supertypeName: classDeclaration.inheritanceClause?.inheritedTypes.first?.type.trimmedDescription,
+                    members: classDeclaration.memberBlock.members
+                )
+                continue
+            }
 
+            if let structDeclaration = statement.item.as(StructDeclSyntax.self) {
+                definitions[structDeclaration.name.text] = buildUnresolvedDefinition(
+                    kind: .struct,
+                    name: structDeclaration.name.text,
+                    supertypeName: nil,
+                    members: structDeclaration.memberBlock.members
+                )
+            }
+        }
+        return definitions
+    }
+
+    private func buildUnresolvedDefinition(
+        kind: ClassDefinition.Kind,
+        name: String,
+        supertypeName: String?,
+        members: MemberBlockItemListSyntax
+    ) -> UnresolvedClassDefinition {
         var storedProperties: [ClassDefinition.StoredProperty] = []
         var methods: [ClassDefinition.Method] = []
 
-        for member in classDeclaration.memberBlock.members {
+        for member in members {
             if let variableDeclaration = member.decl.as(VariableDeclSyntax.self) {
                 for binding in variableDeclaration.bindings {
                     guard let pattern = binding.pattern.as(IdentifierPatternSyntax.self) else {
@@ -183,7 +244,86 @@ public struct Interpreter {
             }
         }
 
-        return ClassDefinition(name: className, properties: storedProperties, methods: methods)
+        return UnresolvedClassDefinition(
+            kind: kind,
+            name: name,
+            supertypeName: supertypeName,
+            properties: storedProperties,
+            methods: methods
+        )
+    }
+
+    private func resolveClassDefinition(named className: String) throws -> ClassDefinition {
+        var stack: Set<String> = []
+        return try resolveClassDefinition(named: className, stack: &stack)
+    }
+
+    private func resolveClassDefinition(named className: String, stack: inout Set<String>) throws -> ClassDefinition {
+        guard let unresolved = storage.typeDefinitions[className] else {
+            throw InterpreterError.classNotFound(className)
+        }
+        if stack.contains(className) {
+            throw InterpreterError.unsupportedSyntax("Cyclic inheritance for \(className)")
+        }
+        stack.insert(className)
+        defer { stack.remove(className) }
+
+        var inheritedProperties: [ClassDefinition.StoredProperty] = []
+        var inheritedMethods: [ClassDefinition.Method] = []
+        if let supertypeName = unresolved.supertypeName {
+            let resolvedSuper = try resolveClassDefinition(named: supertypeName, stack: &stack)
+            guard resolvedSuper.kind == .class else {
+                throw InterpreterError.unsupportedSyntax("Only classes can be inherited")
+            }
+            inheritedProperties = resolvedSuper.properties
+            inheritedMethods = resolvedSuper.methods
+        }
+
+        var propertyByName: [String: ClassDefinition.StoredProperty] = [:]
+        var orderedPropertyNames: [String] = []
+        for property in inheritedProperties + unresolved.properties {
+            if propertyByName[property.name] == nil {
+                orderedPropertyNames.append(property.name)
+            }
+            propertyByName[property.name] = property
+        }
+
+        var methodBySignature: [String: ClassDefinition.Method] = [:]
+        var orderedMethodSignatures: [String] = []
+        for method in inheritedMethods + unresolved.methods {
+            let signature = methodSignatureKey(for: method)
+            if methodBySignature[signature] == nil {
+                orderedMethodSignatures.append(signature)
+            }
+            methodBySignature[signature] = method
+        }
+
+        return ClassDefinition(
+            kind: unresolved.kind,
+            name: unresolved.name,
+            supertypeName: unresolved.supertypeName,
+            properties: orderedPropertyNames.compactMap { propertyByName[$0] },
+            methods: orderedMethodSignatures.compactMap { methodBySignature[$0] }
+        )
+    }
+
+    private func instantiateProperties(for definition: ClassDefinition) throws -> [String: Value] {
+        var objectProperties: [String: Value] = [:]
+        let propertyEnvironment = Environment()
+        for property in definition.properties {
+            guard let defaultValue = property.defaultValue else {
+                throw InterpreterError.missingPropertyDefaultValue(property.name)
+            }
+            let value = try evaluateExpression(defaultValue, environment: propertyEnvironment, objectProperties: &objectProperties)
+            objectProperties[property.name] = value
+            propertyEnvironment.define(property.name, value: value)
+        }
+        return objectProperties
+    }
+
+    private func methodSignatureKey(for method: ClassDefinition.Method) -> String {
+        let parameterNames = method.parameters.map(\.name).joined(separator: ",")
+        return "\(method.name)(\(parameterNames))"
     }
 
     private func executeMethodBody(
@@ -431,6 +571,34 @@ public struct Interpreter {
             return value
         }
 
+        if let memberAccess = expression.as(MemberAccessExprSyntax.self),
+           let baseExpression = memberAccess.base {
+            let baseValue = try evaluateExpression(baseExpression, environment: environment, objectProperties: &objectProperties)
+            let name = memberAccess.declName.baseName.text
+            switch baseValue {
+            case let .classInstance(instance):
+                guard let value = instance.properties[name] else {
+                    throw InterpreterError.unknownIdentifier(name)
+                }
+                return value
+            case let .structInstance(instance):
+                guard let value = instance.properties[name] else {
+                    throw InterpreterError.unknownIdentifier(name)
+                }
+                return value
+            default:
+                throw InterpreterError.unsupportedSyntax(memberAccess.trimmedDescription)
+            }
+        }
+
+        if let functionCall = expression.as(FunctionCallExprSyntax.self),
+           let callee = functionCall.calledExpression.as(DeclReferenceExprSyntax.self) {
+            guard functionCall.arguments.isEmpty else {
+                throw InterpreterError.unsupportedSyntax(functionCall.trimmedDescription)
+            }
+            return try instantiateType(named: callee.baseName.text)
+        }
+
         if let sequence = expression.as(SequenceExprSyntax.self) {
             return try evaluateSequenceExpression(sequence, environment: environment, objectProperties: &objectProperties)
         }
@@ -544,7 +712,40 @@ public struct Interpreter {
             return assignedValue
         }
 
+        if let memberAccess = target.as(MemberAccessExprSyntax.self),
+           let baseExpression = memberAccess.base,
+           let baseReference = baseExpression.as(DeclReferenceExprSyntax.self) {
+            let baseName = baseReference.baseName.text
+            guard let baseValue = environment.lookup(baseName) else {
+                throw InterpreterError.unknownIdentifier(baseName)
+            }
+            let memberName = memberAccess.declName.baseName.text
+            switch baseValue {
+            case let .classInstance(instance):
+                instance.properties[memberName] = assignedValue
+                _ = environment.assign(baseName, value: .classInstance(instance))
+                return assignedValue
+            case var .structInstance(instance):
+                instance.properties[memberName] = assignedValue
+                _ = environment.assign(baseName, value: .structInstance(instance))
+                return assignedValue
+            default:
+                throw InterpreterError.invalidAssignmentTarget
+            }
+        }
+
         throw InterpreterError.invalidAssignmentTarget
+    }
+
+    private func instantiateType(named typeName: String) throws -> Value {
+        let definition = try resolveClassDefinition(named: typeName)
+        let properties = try instantiateProperties(for: definition)
+        switch definition.kind {
+        case .class:
+            return .classInstance(ClassInstance(typeName: definition.name, properties: properties))
+        case .struct:
+            return .structInstance(StructInstance(typeName: definition.name, properties: properties))
+        }
     }
 
     private func addValues(_ lhs: Value, _ rhs: Value) throws -> Value {
