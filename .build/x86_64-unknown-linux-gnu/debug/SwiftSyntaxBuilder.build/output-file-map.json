@@ -1,0 +1,103 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/ConvenienceInitializers.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ConvenienceInitializers.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ConvenienceInitializers.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ConvenienceInitializers~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ConvenienceInitializers.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ConvenienceInitializers.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/DeclSyntaxParseable.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/DeclSyntaxParseable.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/DeclSyntaxParseable.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/DeclSyntaxParseable~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/DeclSyntaxParseable.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/DeclSyntaxParseable.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/Indenter.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Indenter.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Indenter.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Indenter~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Indenter.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Indenter.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/ResultBuilderExtensions.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilderExtensions.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilderExtensions.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilderExtensions~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilderExtensions.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilderExtensions.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/SwiftSyntaxBuilderCompatibility.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SwiftSyntaxBuilderCompatibility.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SwiftSyntaxBuilderCompatibility.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SwiftSyntaxBuilderCompatibility~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SwiftSyntaxBuilderCompatibility.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SwiftSyntaxBuilderCompatibility.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/Syntax+StringInterpolation.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Syntax+StringInterpolation.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Syntax+StringInterpolation.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Syntax+StringInterpolation~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Syntax+StringInterpolation.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/Syntax+StringInterpolation.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/SyntaxNodeWithBody.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxNodeWithBody.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxNodeWithBody.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxNodeWithBody~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxNodeWithBody.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxNodeWithBody.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/SyntaxParsable+ExpressibleByStringInterpolation.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxParsable+ExpressibleByStringInterpolation.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxParsable+ExpressibleByStringInterpolation.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxParsable+ExpressibleByStringInterpolation~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxParsable+ExpressibleByStringInterpolation.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxParsable+ExpressibleByStringInterpolation.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/ValidatingSyntaxNodes.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ValidatingSyntaxNodes.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ValidatingSyntaxNodes.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ValidatingSyntaxNodes~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ValidatingSyntaxNodes.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ValidatingSyntaxNodes.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/WithTrailingCommaSyntax+EnsuringTrailingComma.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/WithTrailingCommaSyntax+EnsuringTrailingComma.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/WithTrailingCommaSyntax+EnsuringTrailingComma.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/WithTrailingCommaSyntax+EnsuringTrailingComma~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/WithTrailingCommaSyntax+EnsuringTrailingComma.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/WithTrailingCommaSyntax+EnsuringTrailingComma.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/generated/BuildableNodes.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/BuildableNodes.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/BuildableNodes.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/BuildableNodes~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/BuildableNodes.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/BuildableNodes.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/generated/RenamedChildrenBuilderCompatibility.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/RenamedChildrenBuilderCompatibility.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/RenamedChildrenBuilderCompatibility.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/RenamedChildrenBuilderCompatibility~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/RenamedChildrenBuilderCompatibility.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/RenamedChildrenBuilderCompatibility.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/generated/ResultBuilders.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilders.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilders.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilders~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilders.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/ResultBuilders.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxBuilder/generated/SyntaxExpressibleByStringInterpolationConformances.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxExpressibleByStringInterpolationConformances.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxExpressibleByStringInterpolationConformances.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxExpressibleByStringInterpolationConformances~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxExpressibleByStringInterpolationConformances.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxBuilder.build/SyntaxExpressibleByStringInterpolationConformances.dia"
+  }
+}

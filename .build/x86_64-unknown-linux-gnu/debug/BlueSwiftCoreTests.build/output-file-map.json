@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftCoreTests/InterpreterTests.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.dia"
+  }
+}

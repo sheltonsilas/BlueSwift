@@ -1,0 +1,3 @@
+module _SwiftSyntaxTestSupport {
+    header "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/include/_SwiftSyntaxTestSupport-Swift.h"
+}

@@ -1,0 +1,3 @@
+module SwiftDiagnostics {
+    header "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftDiagnostics.build/include/SwiftDiagnostics-Swift.h"
+}

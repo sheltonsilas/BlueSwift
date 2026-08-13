@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftBasicFormat/BasicFormat.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/BasicFormat.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/BasicFormat.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/BasicFormat~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/BasicFormat.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/BasicFormat.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftBasicFormat/Syntax+Extensions.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Syntax+Extensions.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Syntax+Extensions.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Syntax+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Syntax+Extensions.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Syntax+Extensions.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftBasicFormat/SyntaxProtocol+Formatted.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/SyntaxProtocol+Formatted.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/SyntaxProtocol+Formatted.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/SyntaxProtocol+Formatted~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/SyntaxProtocol+Formatted.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/SyntaxProtocol+Formatted.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftBasicFormat/Trivia+FormatExtensions.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Trivia+FormatExtensions.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Trivia+FormatExtensions.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Trivia+FormatExtensions~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Trivia+FormatExtensions.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/Trivia+FormatExtensions.dia"
+  }
+}

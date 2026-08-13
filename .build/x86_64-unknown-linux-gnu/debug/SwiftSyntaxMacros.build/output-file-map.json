@@ -1,0 +1,103 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/AbstractSourceLocation.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AbstractSourceLocation.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AbstractSourceLocation.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AbstractSourceLocation~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AbstractSourceLocation.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AbstractSourceLocation.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroExpansionContext.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MacroExpansionContext.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MacroExpansionContext.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MacroExpansionContext~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MacroExpansionContext.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MacroExpansionContext.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/AccessorMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AccessorMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AccessorMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AccessorMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AccessorMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AccessorMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/AttachedMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AttachedMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AttachedMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AttachedMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AttachedMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/AttachedMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/CodeItemMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/CodeItemMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/CodeItemMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/CodeItemMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/CodeItemMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/CodeItemMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/DeclarationMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/DeclarationMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/DeclarationMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/DeclarationMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/DeclarationMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/DeclarationMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/ExpressionMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExpressionMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExpressionMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExpressionMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExpressionMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExpressionMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/ExtensionMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExtensionMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExtensionMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExtensionMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExtensionMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/ExtensionMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/FreestandingMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/FreestandingMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/FreestandingMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/FreestandingMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/FreestandingMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/FreestandingMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/Macro+Format.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro+Format.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro+Format.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro+Format~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro+Format.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro+Format.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/Macro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/Macro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/MemberAttributeMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberAttributeMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberAttributeMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberAttributeMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberAttributeMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberAttributeMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/MemberMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/MemberMacro.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftSyntaxMacros/MacroProtocols/PeerMacro.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/PeerMacro.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/PeerMacro.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/PeerMacro~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/PeerMacro.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftSyntaxMacros.build/PeerMacro.dia"
+  }
+}

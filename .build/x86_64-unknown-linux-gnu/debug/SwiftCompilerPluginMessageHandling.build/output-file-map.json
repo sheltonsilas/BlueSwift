@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/CompilerPluginMessageHandler.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/CompilerPluginMessageHandler.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/CompilerPluginMessageHandler.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/CompilerPluginMessageHandler~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/CompilerPluginMessageHandler.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/CompilerPluginMessageHandler.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/Diagnostics.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Diagnostics.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Diagnostics.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Diagnostics~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Diagnostics.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Diagnostics.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/Macros.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Macros.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Macros.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Macros~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Macros.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/Macros.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/PluginMacroExpansionContext.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMacroExpansionContext.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMacroExpansionContext.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMacroExpansionContext~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMacroExpansionContext.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMacroExpansionContext.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/PluginMessageCompatibility.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessageCompatibility.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessageCompatibility.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessageCompatibility~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessageCompatibility.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessageCompatibility.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/SwiftCompilerPluginMessageHandling/PluginMessages.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessages.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessages.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessages~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessages.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftCompilerPluginMessageHandling.build/PluginMessages.dia"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/AssertEqualWithDiff.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/AssertEqualWithDiff.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/AssertEqualWithDiff.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/AssertEqualWithDiff~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/AssertEqualWithDiff.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/AssertEqualWithDiff.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/IncrementalParseTestUtils.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/IncrementalParseTestUtils.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/IncrementalParseTestUtils.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/IncrementalParseTestUtils~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/IncrementalParseTestUtils.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/IncrementalParseTestUtils.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/LocationMarkers.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/LocationMarkers.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/LocationMarkers.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/LocationMarkers~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/LocationMarkers.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/LocationMarkers.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/String+TrimmingTrailingWhitespace.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/String+TrimmingTrailingWhitespace.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/String+TrimmingTrailingWhitespace.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/String+TrimmingTrailingWhitespace~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/String+TrimmingTrailingWhitespace.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/String+TrimmingTrailingWhitespace.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/Syntax+Assertions.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/Syntax+Assertions.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/Syntax+Assertions.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/Syntax+Assertions~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/Syntax+Assertions.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/Syntax+Assertions.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/SyntaxCollection+AtIndex.swift.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxCollection+AtIndex.swift.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxCollection+AtIndex.swift.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxCollection+AtIndex.swift~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxCollection+AtIndex.swift.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxCollection+AtIndex.swift.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/SyntaxComparison.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxComparison.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxComparison.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxComparison~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxComparison.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxComparison.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/SyntaxProtocol+Initializer.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxProtocol+Initializer.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxProtocol+Initializer.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxProtocol+Initializer~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxProtocol+Initializer.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/SyntaxProtocol+Initializer.dia"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxTestSupport/TestUtils.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/TestUtils.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/TestUtils.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/TestUtils~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/TestUtils.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/_SwiftSyntaxTestSupport.build/TestUtils.dia"
+  }
+}

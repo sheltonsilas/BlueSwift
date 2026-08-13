@@ -201,6 +201,11 @@ public struct Interpreter {
                 _ = try evaluateExpression(expressionStatement.expression, environment: environment, objectProperties: &objectProperties)
                 continue
             }
+
+            if let expression = statement.item.as(ExprSyntax.self) {
+                _ = try evaluateExpression(expression, environment: environment, objectProperties: &objectProperties)
+                continue
+            }
         }
 
         return .void
