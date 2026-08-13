@@ -5,6 +5,7 @@ public enum Value: Equatable {
     case int(Int)
     case string(String)
     case bool(Bool)
+    case array([Value])
     case void
 }
 
@@ -77,6 +78,7 @@ public enum InterpreterError: Error, Equatable {
     case unknownIdentifier(String)
     case invalidAssignmentTarget
     case unsupportedSyntax(String)
+    case invalidCondition(Value)
 }
 
 public struct Interpreter {
@@ -189,12 +191,59 @@ public struct Interpreter {
         environment: Environment,
         objectProperties: inout [String: Value]
     ) throws -> Value {
+        let outcome = try executeStatements(statements, environment: environment, objectProperties: &objectProperties)
+        if case let .returned(value) = outcome {
+            return value
+        }
+        return .void
+    }
+
+    private enum ExecutionOutcome {
+        case `continue`
+        case returned(Value)
+    }
+
+    private func executeStatements(
+        _ statements: [CodeBlockItemSyntax],
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws -> ExecutionOutcome {
         for statement in statements {
             if let returnStatement = statement.item.as(ReturnStmtSyntax.self) {
                 guard let expression = returnStatement.expression else {
-                    return .void
+                    return .returned(.void)
                 }
-                return try evaluateExpression(expression, environment: environment, objectProperties: &objectProperties)
+                let value = try evaluateExpression(expression, environment: environment, objectProperties: &objectProperties)
+                return .returned(value)
+            }
+
+            if let variableDeclaration = statement.item.as(VariableDeclSyntax.self) {
+                try executeVariableDeclaration(variableDeclaration, environment: environment, objectProperties: &objectProperties)
+                continue
+            }
+
+            if let ifExpression = statement.item.as(IfExprSyntax.self) {
+                let ifOutcome = try executeIfExpression(ifExpression, environment: environment, objectProperties: &objectProperties)
+                if case .returned = ifOutcome {
+                    return ifOutcome
+                }
+                continue
+            }
+
+            if let whileStatement = statement.item.as(WhileStmtSyntax.self) {
+                let whileOutcome = try executeWhileStatement(whileStatement, environment: environment, objectProperties: &objectProperties)
+                if case .returned = whileOutcome {
+                    return whileOutcome
+                }
+                continue
+            }
+
+            if let forStatement = statement.item.as(ForStmtSyntax.self) {
+                let forOutcome = try executeForStatement(forStatement, environment: environment, objectProperties: &objectProperties)
+                if case .returned = forOutcome {
+                    return forOutcome
+                }
+                continue
             }
 
             if let expressionStatement = statement.item.as(ExpressionStmtSyntax.self) {
@@ -206,9 +255,119 @@ public struct Interpreter {
                 _ = try evaluateExpression(expression, environment: environment, objectProperties: &objectProperties)
                 continue
             }
+
+            throw InterpreterError.unsupportedSyntax(statement.item.trimmedDescription)
         }
 
-        return .void
+        return .continue
+    }
+
+    private func executeVariableDeclaration(
+        _ variableDeclaration: VariableDeclSyntax,
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws {
+        for binding in variableDeclaration.bindings {
+            guard let pattern = binding.pattern.as(IdentifierPatternSyntax.self) else {
+                throw InterpreterError.unsupportedSyntax(binding.pattern.trimmedDescription)
+            }
+            guard let initializer = binding.initializer else {
+                throw InterpreterError.unsupportedSyntax(binding.trimmedDescription)
+            }
+            let value = try evaluateExpression(initializer.value, environment: environment, objectProperties: &objectProperties)
+            environment.define(pattern.identifier.text, value: value)
+        }
+    }
+
+    private func executeIfExpression(
+        _ ifExpression: IfExprSyntax,
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws -> ExecutionOutcome {
+        if try evaluateConditionElements(ifExpression.conditions, environment: environment, objectProperties: &objectProperties) {
+            let scope = Environment(parent: environment)
+            return try executeStatements(Array(ifExpression.body.statements), environment: scope, objectProperties: &objectProperties)
+        }
+
+        guard let elseBody = ifExpression.elseBody else {
+            return .continue
+        }
+
+        if let elseIfExpression = elseBody.as(IfExprSyntax.self) {
+            return try executeIfExpression(elseIfExpression, environment: environment, objectProperties: &objectProperties)
+        }
+
+        if let elseBlock = elseBody.as(CodeBlockSyntax.self) {
+            let scope = Environment(parent: environment)
+            return try executeStatements(Array(elseBlock.statements), environment: scope, objectProperties: &objectProperties)
+        }
+
+        throw InterpreterError.unsupportedSyntax(elseBody.trimmedDescription)
+    }
+
+    private func executeWhileStatement(
+        _ whileStatement: WhileStmtSyntax,
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws -> ExecutionOutcome {
+        while try evaluateConditionElements(whileStatement.conditions, environment: environment, objectProperties: &objectProperties) {
+            let scope = Environment(parent: environment)
+            let loopOutcome = try executeStatements(Array(whileStatement.body.statements), environment: scope, objectProperties: &objectProperties)
+            if case .returned = loopOutcome {
+                return loopOutcome
+            }
+        }
+
+        return .continue
+    }
+
+    private func executeForStatement(
+        _ forStatement: ForStmtSyntax,
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws -> ExecutionOutcome {
+        guard let identifierPattern = forStatement.pattern.as(IdentifierPatternSyntax.self) else {
+            throw InterpreterError.unsupportedSyntax(forStatement.pattern.trimmedDescription)
+        }
+        let iteratorName = identifierPattern.identifier.text
+        let iterableValue = try evaluateExpression(forStatement.sequence, environment: environment, objectProperties: &objectProperties)
+
+        guard case let .array(items) = iterableValue else {
+            throw InterpreterError.unsupportedSyntax(forStatement.sequence.trimmedDescription)
+        }
+
+        for item in items {
+            let scope = Environment(parent: environment)
+            scope.define(iteratorName, value: item)
+            let loopOutcome = try executeStatements(Array(forStatement.body.statements), environment: scope, objectProperties: &objectProperties)
+            if case .returned = loopOutcome {
+                return loopOutcome
+            }
+        }
+
+        return .continue
+    }
+
+    private func evaluateConditionElements(
+        _ conditions: ConditionElementListSyntax,
+        environment: Environment,
+        objectProperties: inout [String: Value]
+    ) throws -> Bool {
+        for conditionElement in conditions {
+            switch conditionElement.condition {
+            case let .expression(expression):
+                let conditionValue = try evaluateExpression(expression, environment: environment, objectProperties: &objectProperties)
+                guard case let .bool(condition) = conditionValue else {
+                    throw InterpreterError.invalidCondition(conditionValue)
+                }
+                if !condition {
+                    return false
+                }
+            default:
+                throw InterpreterError.unsupportedSyntax(conditionElement.trimmedDescription)
+            }
+        }
+        return true
     }
 
     private func evaluateExpression(
@@ -229,6 +388,19 @@ public struct Interpreter {
 
         if let booleanLiteral = expression.as(BooleanLiteralExprSyntax.self) {
             return .bool(booleanLiteral.literal.tokenKind == .keyword(.true))
+        }
+
+        if let arrayLiteral = expression.as(ArrayExprSyntax.self) {
+            let elements = try arrayLiteral.elements.map { element in
+                try evaluateExpression(element.expression, environment: environment, objectProperties: &objectProperties)
+            }
+            return .array(elements)
+        }
+
+        if let tupleExpression = expression.as(TupleExprSyntax.self),
+           tupleExpression.elements.count == 1,
+           let singleElement = tupleExpression.elements.first {
+            return try evaluateExpression(singleElement.expression, environment: environment, objectProperties: &objectProperties)
         }
 
         if let reference = expression.as(DeclReferenceExprSyntax.self) {
@@ -256,6 +428,19 @@ public struct Interpreter {
             return try evaluateSequenceExpression(sequence, environment: environment, objectProperties: &objectProperties)
         }
 
+        if let prefixOperator = expression.as(PrefixOperatorExprSyntax.self) {
+            let operand = try evaluateExpression(prefixOperator.expression, environment: environment, objectProperties: &objectProperties)
+            switch prefixOperator.operator.text {
+            case "!":
+                guard case let .bool(value) = operand else {
+                    throw InterpreterError.unsupportedSyntax(prefixOperator.trimmedDescription)
+                }
+                return .bool(!value)
+            default:
+                throw InterpreterError.unsupportedSyntax(prefixOperator.operator.text)
+            }
+        }
+
         throw InterpreterError.unsupportedSyntax(expression.trimmedDescription)
     }
 
@@ -265,16 +450,13 @@ public struct Interpreter {
         objectProperties: inout [String: Value]
     ) throws -> Value {
         let elements = Array(sequence.elements)
-        guard elements.count == 3 else {
+        guard elements.count >= 3, elements.count % 2 == 1 else {
             throw InterpreterError.unsupportedSyntax(sequence.trimmedDescription)
         }
-
         let leftExpression = elements[0]
-        let operatorExpression = elements[1]
-        let rightExpression = elements[2]
-        let rightValue = try evaluateExpression(rightExpression, environment: environment, objectProperties: &objectProperties)
-
-        if operatorExpression.is(AssignmentExprSyntax.self) {
+        let firstOperator = elements[1]
+        if elements.count == 3, firstOperator.is(AssignmentExprSyntax.self) {
+            let rightValue = try evaluateExpression(elements[2], environment: environment, objectProperties: &objectProperties)
             return try assignValue(
                 rightValue,
                 to: leftExpression,
@@ -284,25 +466,31 @@ public struct Interpreter {
             )
         }
 
-        if let binaryOperator = operatorExpression.as(BinaryOperatorExprSyntax.self) {
-            switch binaryOperator.operator.text {
-            case "+=":
-                return try assignValue(
-                    rightValue,
-                    to: leftExpression,
-                    withPlusEquals: true,
-                    environment: environment,
-                    objectProperties: &objectProperties
-                )
-            case "+":
-                let leftValue = try evaluateExpression(leftExpression, environment: environment, objectProperties: &objectProperties)
-                return try addValues(leftValue, rightValue)
-            default:
-                throw InterpreterError.unsupportedSyntax(binaryOperator.operator.text)
-            }
+        if elements.count == 3,
+           let binaryOperator = firstOperator.as(BinaryOperatorExprSyntax.self),
+           binaryOperator.operator.text == "+=" {
+            let rightValue = try evaluateExpression(elements[2], environment: environment, objectProperties: &objectProperties)
+            return try assignValue(
+                rightValue,
+                to: leftExpression,
+                withPlusEquals: true,
+                environment: environment,
+                objectProperties: &objectProperties
+            )
         }
 
-        throw InterpreterError.unsupportedSyntax(sequence.trimmedDescription)
+        var currentValue = try evaluateExpression(leftExpression, environment: environment, objectProperties: &objectProperties)
+        var index = 1
+        while index < elements.count {
+            guard let binaryOperator = elements[index].as(BinaryOperatorExprSyntax.self) else {
+                throw InterpreterError.unsupportedSyntax(elements[index].trimmedDescription)
+            }
+            let rightValue = try evaluateExpression(elements[index + 1], environment: environment, objectProperties: &objectProperties)
+            currentValue = try applyBinaryOperator(binaryOperator.operator.text, left: currentValue, right: rightValue)
+            index += 2
+        }
+
+        return currentValue
     }
 
     private func assignValue(
@@ -355,6 +543,54 @@ public struct Interpreter {
             return .string(left + right)
         default:
             throw InterpreterError.unsupportedSyntax("Unsupported '+' operands")
+        }
+    }
+
+    private func applyBinaryOperator(_ op: String, left: Value, right: Value) throws -> Value {
+        switch op {
+        case "+":
+            return try addValues(left, right)
+        case "==":
+            return .bool(left == right)
+        case "!=":
+            return .bool(left != right)
+        case "<":
+            guard case let .int(lhs) = left, case let .int(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '<' operands")
+            }
+            return .bool(lhs < rhs)
+        case ">":
+            guard case let .int(lhs) = left, case let .int(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '>' operands")
+            }
+            return .bool(lhs > rhs)
+        case "<=":
+            guard case let .int(lhs) = left, case let .int(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '<=' operands")
+            }
+            return .bool(lhs <= rhs)
+        case ">=":
+            guard case let .int(lhs) = left, case let .int(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '>=' operands")
+            }
+            return .bool(lhs >= rhs)
+        case "&&":
+            guard case let .bool(lhs) = left, case let .bool(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '&&' operands")
+            }
+            return .bool(lhs && rhs)
+        case "||":
+            guard case let .bool(lhs) = left, case let .bool(rhs) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '||' operands")
+            }
+            return .bool(lhs || rhs)
+        case "..<":
+            guard case let .int(start) = left, case let .int(end) = right else {
+                throw InterpreterError.unsupportedSyntax("Unsupported '..<' operands")
+            }
+            return .array((start..<end).map { .int($0) })
+        default:
+            throw InterpreterError.unsupportedSyntax(op)
         }
     }
 }
