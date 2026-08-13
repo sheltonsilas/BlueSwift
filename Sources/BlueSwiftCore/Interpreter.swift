@@ -247,7 +247,14 @@ public struct Interpreter {
             }
 
             if let expressionStatement = statement.item.as(ExpressionStmtSyntax.self) {
-                _ = try evaluateExpression(expressionStatement.expression, environment: environment, objectProperties: &objectProperties)
+                if let ifExpression = expressionStatement.expression.as(IfExprSyntax.self) {
+                    let ifOutcome = try executeIfExpression(ifExpression, environment: environment, objectProperties: &objectProperties)
+                    if case .returned = ifOutcome {
+                        return ifOutcome
+                    }
+                } else {
+                    _ = try evaluateExpression(expressionStatement.expression, environment: environment, objectProperties: &objectProperties)
+                }
                 continue
             }
 
@@ -436,6 +443,11 @@ public struct Interpreter {
                     throw InterpreterError.unsupportedSyntax(prefixOperator.trimmedDescription)
                 }
                 return .bool(!value)
+            case "-":
+                guard case let .int(value) = operand else {
+                    throw InterpreterError.unsupportedSyntax(prefixOperator.trimmedDescription)
+                }
+                return .int(-value)
             default:
                 throw InterpreterError.unsupportedSyntax(prefixOperator.operator.text)
             }
