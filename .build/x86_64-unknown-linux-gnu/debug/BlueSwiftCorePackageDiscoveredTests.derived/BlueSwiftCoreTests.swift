@@ -8,7 +8,10 @@ fileprivate extension InterpreterTests {
         ("testEvaluatesIfElseIfElseBranches", testEvaluatesIfElseIfElseBranches),
         ("testEvaluatesMethodWithParameterAndReturnValue", testEvaluatesMethodWithParameterAndReturnValue),
         ("testEvaluatesSimpleIncrementMethod", testEvaluatesSimpleIncrementMethod),
-        ("testEvaluatesWhileLoopAccumulation", testEvaluatesWhileLoopAccumulation)
+        ("testEvaluatesWhileLoopAccumulation", testEvaluatesWhileLoopAccumulation),
+        ("testStructCopyDoesNotShareMutations", testStructCopyDoesNotShareMutations),
+        ("testSubclassCanCallInheritedMethod", testSubclassCanCallInheritedMethod),
+        ("testSubclassMethodOverrideWinsOverSuperclassMethod", testSubclassMethodOverrideWinsOverSuperclassMethod)
     ]
 }
 @available(*, deprecated, message: "Not actually deprecated. Marked as deprecated to allow inclusion of deprecated tests (which test deprecated functionality) without warnings")
