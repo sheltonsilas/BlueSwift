@@ -115,11 +115,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftUITests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/all-discovered-tests.swift"
         },
         {
           "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUITests.swiftmodule"
         },
         {
           "kind" : "file",
@@ -135,6 +143,7 @@
       "moduleOutputPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftCorePackageDiscoveredTests.swiftmodule",
       "objects" : [
         "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/BlueSwiftCoreTests.swift.o",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/BlueSwiftUITests.swift.o",
         "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/all-discovered-tests.swift.o"
       ],
       "otherArguments" : [
@@ -178,6 +187,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/BlueSwiftUITests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/all-discovered-tests.swift.o"
         },
         {
@@ -188,6 +201,7 @@
       "prepareForIndexing" : false,
       "sources" : [
         "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftCoreTests.swift",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftUITests.swift",
         "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/all-discovered-tests.swift"
       ],
       "tempsPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build",
@@ -205,6 +219,10 @@
         {
           "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUITests.swiftmodule"
         },
         {
           "kind" : "file",
@@ -352,6 +370,167 @@
         "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftCoreTests/InterpreterTests.swift"
       ],
       "tempsPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.BlueSwiftUI-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/sources",
+      "importPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/Sources/BlueSwiftUI/ClassDiagramView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "BlueSwiftUI",
+      "moduleOutputPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUI.swiftmodule",
+      "objects" : [
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/include/BlueSwiftUI-Swift.h",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "blueswift",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUI.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/BlueSwift/BlueSwift/Sources/BlueSwiftUI/ClassDiagramView.swift"
+      ],
+      "tempsPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.BlueSwiftUITests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/sources",
+      "importPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftUITests/ClassDiagramViewTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUI.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "BlueSwiftUITests",
+      "moduleOutputPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUITests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/ClassDiagramViewTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "blueswift",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/ClassDiagramViewTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules/BlueSwiftUITests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftUITests/ClassDiagramViewTests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build",
       "wholeModuleOptimization" : false
     },
     "C.SwiftBasicFormat-x86_64-unknown-linux-gnu-debug.module" : {
@@ -3539,6 +3718,7 @@
       "blueswift",
       "-c",
       "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftCoreTests.swift",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftUITests.swift",
       "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/all-discovered-tests.swift",
       "-I",
       "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
@@ -3628,6 +3808,93 @@
       "blueswift",
       "-c",
       "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftCoreTests/InterpreterTests.swift",
+      "-I",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "blueswift",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "BlueSwiftUI" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "BlueSwiftUI",
+      "-package-name",
+      "blueswift",
+      "-c",
+      "/home/runner/work/BlueSwift/BlueSwift/Sources/BlueSwiftUI/ClassDiagramView.swift",
+      "-I",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/include/BlueSwiftUI-Swift.h",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "blueswift",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "BlueSwiftUITests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "BlueSwiftUITests",
+      "-package-name",
+      "blueswift",
+      "-c",
+      "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftUITests/ClassDiagramViewTests.swift",
       "-I",
       "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/Modules",
       "-target",
@@ -4504,6 +4771,8 @@
     ],
     "BlueSwiftCorePackageDiscoveredTests" : [
       "BlueSwiftCoreTests",
+      "BlueSwiftUITests",
+      "BlueSwiftUI",
       "BlueSwiftCore",
       "SwiftParser",
       "SwiftSyntax",
@@ -4512,12 +4781,27 @@
     "BlueSwiftCorePackageTests" : [
       "BlueSwiftCorePackageDiscoveredTests",
       "BlueSwiftCoreTests",
+      "BlueSwiftUITests",
+      "BlueSwiftUI",
       "BlueSwiftCore",
       "SwiftParser",
       "SwiftSyntax",
       "SwiftSyntax509"
     ],
     "BlueSwiftCoreTests" : [
+      "BlueSwiftCore",
+      "SwiftParser",
+      "SwiftSyntax",
+      "SwiftSyntax509"
+    ],
+    "BlueSwiftUI" : [
+      "BlueSwiftCore",
+      "SwiftParser",
+      "SwiftSyntax",
+      "SwiftSyntax509"
+    ],
+    "BlueSwiftUITests" : [
+      "BlueSwiftUI",
       "BlueSwiftCore",
       "SwiftParser",
       "SwiftSyntax",
@@ -4649,12 +4933,20 @@
         {
           "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/ClassDiagramViewTests.swift.o"
         }
       ],
       "outputs" : [
         {
           "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftUITests.swift"
         },
         {
           "kind" : "file",
@@ -4712,6 +5004,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/BlueSwiftUITests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.derived/all-discovered-tests.swift"
         }
       ],
@@ -4756,6 +5052,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/BlueSwiftUITests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCorePackageDiscoveredTests.build/all-discovered-tests.swift.o"
         },
         {
@@ -4773,6 +5073,22 @@
         {
           "kind" : "file",
           "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/InterpreterTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/BlueSwiftUI.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/BlueSwiftUITests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/ClassDiagramViewTests.swift.o"
         },
         {
           "kind" : "file",
@@ -5174,6 +5490,34 @@
         }
       ],
       "outputFilePath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftCoreTests.build/sources"
+    },
+    "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/Sources/BlueSwiftUI/ClassDiagramView.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/sources"
+    },
+    "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/BlueSwift/BlueSwift/Tests/BlueSwiftUITests/ClassDiagramViewTests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUITests.build/sources"
     },
     "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/SwiftBasicFormat.build/sources" : {
       "alwaysOutOfDate" : false,

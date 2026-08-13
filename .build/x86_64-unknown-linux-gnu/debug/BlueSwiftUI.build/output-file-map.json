@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/primary.swiftdeps"
+  },
+  "/home/runner/work/BlueSwift/BlueSwift/Sources/BlueSwiftUI/ClassDiagramView.swift": {
+    "dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.d",
+    "object": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.swift.o",
+    "swiftmodule": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.swiftdeps",
+    "diagnostics": "/home/runner/work/BlueSwift/BlueSwift/.build/x86_64-unknown-linux-gnu/debug/BlueSwiftUI.build/ClassDiagramView.dia"
+  }
+}
