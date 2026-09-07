@@ -1,13 +1,11 @@
-import SwiftUI
 import BlueSwiftCore
 
-// Adapter/model used by the UI. Replace or adapt if BlueSwiftCore exposes a different type.
 public struct ParsedClass: Identifiable, Hashable {
     public let id: String
     public let name: String
     public let properties: [String]
     public let methods: [String]
-    public let superclass: String? // name of superclass, if any
+    public let superclass: String?
 
     public init(name: String, properties: [String] = [], methods: [String] = [], superclass: String? = nil) {
         self.id = name
@@ -17,6 +15,14 @@ public struct ParsedClass: Identifiable, Hashable {
         self.superclass = superclass
     }
 }
+
+#if canImport(SwiftUI)
+import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 // PreferenceKey for collecting box centers keyed by class name
 private struct BoxCenterKey: PreferenceKey {
@@ -108,10 +114,20 @@ private struct ClassBoxView: View {
             }
         }
         .padding(12)
-        .background(RoundedRectangle(cornerRadius: 8).fill(Color(UIColor.secondarySystemBackground)))
+        .background(RoundedRectangle(cornerRadius: 8).fill(boxBackgroundColor))
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary.opacity(0.3)))
         .frame(minWidth: 160)
     }
+}
+
+private var boxBackgroundColor: Color {
+#if canImport(UIKit)
+    return Color(UIColor.secondarySystemBackground)
+#elseif canImport(AppKit)
+    return Color(NSColor.windowBackgroundColor)
+#else
+    return Color.gray.opacity(0.1)
+#endif
 }
 
 // MARK: - Preview with a small hardcoded set (counter / adder / subclass examples)
@@ -128,19 +144,30 @@ struct ClassDiagramView_Previews: PreviewProvider {
         let adder = ParsedClass(
             name: "Adder",
             properties: ["total: Int"],
-            methods: ["add(_:)"] ,
+            methods: ["add(_:)"],
             superclass: nil
         )
 
         let specialAdder = ParsedClass(
             name: "SpecialAdder",
             properties: ["multiplier: Int"],
-            methods: ["add(_:)"] ,
+            methods: ["add(_:)"],
             superclass: "Adder"
         )
 
         ClassDiagramView(classes: [counter, adder, specialAdder])
             .previewDisplayName("Class Diagram")
+    }
+}
+#endif
+
+#else
+/// Non-Apple fallback so this package compiles in environments without SwiftUI.
+public struct ClassDiagramView {
+    public let classes: [ParsedClass]
+
+    public init(classes: [ParsedClass]) {
+        self.classes = classes
     }
 }
 #endif
