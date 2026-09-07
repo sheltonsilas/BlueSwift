@@ -60,8 +60,36 @@ part everything else depends on.
 
 ## Status
 
-🚧 Early scaffold. Interpreter core is milestone 1 — see
-`.github/copilot-instructions.md` for the current build plan.
+🚧 Active prototype.
+
+Current package includes:
+- `BlueSwiftCore`: parser-backed interpreter with minimal runtime evaluation
+  (stored properties, initializers, inheritance property lookup, `if`/`else`,
+  `while`, assignment, `+=`, and literal/`+` expressions for core tests).
+- `BlueSwiftUI`: SwiftUI class diagram + workspace surface with source input,
+  parse/run actions, and an object-bench-style result/properties panel.
+
+The interpreter is intentionally scoped and does **not** yet implement full
+Swift language behavior.
+
+## Building and testing
+
+```bash
+swift build
+swift test
+```
+
+## iOS archive / `.ipa` export (macOS only)
+
+This repository is developed and tested as a Swift package. Producing a signed
+`.ipa` requires an Xcode app target on macOS with signing configured.
+
+High-level steps on macOS:
+1. Create/open an iOS app target that depends on `BlueSwiftCore` and
+   `BlueSwiftUI`.
+2. Configure Team, Bundle Identifier, and signing certificates/profiles.
+3. Archive via Xcode (`Product > Archive`) or `xcodebuild archive`.
+4. Export the archive as `.ipa` from Organizer or `xcodebuild -exportArchive`.
 
 ## License
 
